@@ -1,9 +1,4 @@
 
-<center>
-<a href="https://swishvinmik.azurewebsites.net/" target="_blank"> <img src="swish-webapp/assets/Group.png" alt="django" width="300" height="300"/> </a>
-</center>
-<center>
-
 # Swish
 > Swish is the smartest way to log in using facial recognition.
 </center>
@@ -127,7 +122,7 @@ python manage.py runserver
 * Incorporating autofill with google autofill or Microsoft authenticator rather than from extension itself.
 * Option to store multiple profiles of a face for multi. angle authentication.
 * Incorporating decentralized authentication with the help of Block-chain and IPFS. 
-* Instead of just autofilling passwords , documents can also be retrieved
+* Instead of just autofilling passwords , documents can also be retrieved.
 
 ---
 
