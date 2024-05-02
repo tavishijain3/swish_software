@@ -1,99 +1,133 @@
+
+<center>
+<a href="https://swishvinmik.azurewebsites.net/" target="_blank"> <img src="swish-webapp/assets/Group.png" alt="django" width="300" height="300"/> </a>
+</center>
+<center>
+
 # Swish
+> Swish is the smartest way to log in using facial recognition.
+</center>
 
-Swish is the smartest way to log in using facial recognition.
+---
 
-## Overview
+<a href="https://swishvinmik.azurewebsites.net/">Swish</a> is an extension that recognises a user whenever he/she tries to Log-In any of the accounts. The user who has registered his/her face will only be given the option to access the accounts. The face recognition will be done every time the user tries to access any of the accounts. Option to open the accounts via Pin is also provided. Hence, there is no need to Log-Out every time of the account to keep the data safe. Without any single click you can access your accounts as well as keep the account password protected.
 
-Swish is an extension that recognizes a user whenever they try to log in to any of their accounts. Only users who have registered their face will be given the option to access the accounts. Facial recognition occurs every time the user attempts to access any of the accounts. An option to open the accounts via PIN is also provided, eliminating the need to log out every time to keep the data safe. With just a single click, users can access their accounts and keep their account password protected.
+<br>
+
 
 ## Built With
+| | | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|
+|<a href="https://www.djangoproject.com/" target="_blank"> <img src="https://static.djangoproject.com/img/logos/django-logo-positive.png" alt="django" width="100" height="100"/> </a>|<a href="https://opencv.org/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="opencv" width="150" height="70"/> </a>| <a href="https://opencv.org/" target="_blank"> <img src="swish-webapp/assets/mediapipe.png" alt="Mediapipe" width="210" height="50"/> </a>| <a href="" target="_blank"><img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="bootstrap" width="200" height="100" /></a>
 
-- Django
-- OpenCV
-- Mediapipe
-- Bootstrap
 
-## Features
 
+
+## 💪🏻 Features
 - Save Password
-- Auto-Fill with Facial Recognition
-- PIN Login
+- Auto-Fill with Facial Recognition 
+- PIN Login 
 
-## Dependencies
 
-- Chrome Browser
-- Python 3.8
-- Dlib
 
-## Getting Started
+## 👨‍💻 Dependencies
+ - Chrome Browser
+ - Python 3.8
+ - Dlib
+
+
+
+## 🏃‍♀️ Getting Started
 
 ### Running this app using Docker
 
-You'll need to have Docker installed. It's available on Windows, macOS, and most Linux distributions. If you're new to Docker and want to learn more, check out the additional resources links near the bottom of this README.
+You'll need to have [Docker installed](https://docs.docker.com/get-docker/).
+It's available on Windows, macOS and most distros of Linux. If you're new to
+Docker and want to learn it in detail check out the [additional resources
+links](#learn-more-about-docker-and-django) near the bottom of this README.
 
-If you're using Windows, it's expected that you're following along inside of WSL or WSL 2.
+If you're using Windows, it will be expected that you're following along inside
+of [WSL or WSL
+2](https://nickjanetakis.com/blog/a-linux-dev-environment-on-windows-with-wsl-2-docker-desktop-and-more).
+That's because we're going to be running shell commands. You can always modify
+these commands for PowerShell if you want.
 
-1. Clone this repo anywhere you want and move into the directory:
+#### Clone this repo anywhere you want and move into the directory:
+
+```sh
 git clone https://github.com/STCVIT/Swish.git
 cd SWISH-SUBMISSION
 cd swish-webapp
 
 # Optionally checkout a specific tag, such as: git checkout 0.4.0
+```
 
-2. Build everything:
+#### Build everything:
+
+*The first time you run this it's going to take 5-10 minutes depending on your
+internet connection speed and computer's hardware specs. That's because it's
+going to download a few Docker images and build the Python*
+
+```sh
 docker build --tag swish:latest .
+```
+
+Now that everything is built. To get the app running use this command.
 
 
-3. Now that everything is built, run the app with:
+```sh
 docker run --name swish -d -p 8000:8000 swish:latest
+```
 
 
-4. Visit http://localhost:8000 in your favorite browser to check it out.
+*We'll go over that `./run` script in a bit!*
 
-### Running locally
+#### Check it out in a browser:
 
-1. Clone the repository:
-git clone https://github.com/vinmik/Swish-Submission
+Visit <http://localhost:8000> in your favorite browser.
 
-2. Navigate to the project directory:
-cd Swish-Submission/swish-webapp
+# Check out the hosted link:
 
-3. Install the dependencies:
+Visit <https://swishvinmik.azurewebsites.net/> in your favorite browser.
+
+## Running locally
+
+
+- Clone the repository
+```
+git clone https://github.com/vinmik/Swish-Submission 
+```
+- Install the dependencies
+```
 pip install -r requirements.txt
-
-4. Start the server:
+```
+- Start the server
+```
 python manage.py runserver
+```
+#### Setup the initial database:
 
-5. Setup the initial database:
-python manage.py migrate
+```sh
+./run manage migrate 
+```
 
-6. Visit http://localhost:8000 in your favorite browser to access the application.
+## 🎍 novelty
+* Swish not only authenticates but also autofills as well as logs the user in for a seamless experience
 
-## Novelty
+* Swish is compatible with both chrome and edge
 
-- Swish not only authenticates but also autofills and logs the user in for a seamless experience.
-- Swish is compatible with both Chrome and Edge.
-- Use of DLIB library for facial recognition ensures optimal accuracy and preprocessed images account for least errors.
-- Swish webapp is disability responsive, making it accessible to people with low or limited vision.
+* Use of DLIB library for facial recognition ensures optimal accuracy and preprocessed images account for least errors
 
-## Future Scope and Development
+* Swish webapp is disability responsive (i.e. is accible to people with low or limited vision)  
 
-- IR Sensor input for depth Perception
-- Support For Android and IOS based browsers also.
-- Incorporating autofill with Google Autofill or Microsoft Authenticator rather than from extension itself.
-- Option to store multiple profiles of a face for multi-angle authentication.
-- Incorporating decentralized authentication with the help of Block-chain and IPFS.
-- Instead of just autofilling passwords, documents can also be retrieved.
+## ⌛ Future Scope and Development
+* IR Sensor input for depth Perception
 
+* Support For Android and IOS based browsers also.
+* Incorporating autofill with google autofill or Microsoft authenticator rather than from extension itself.
+* Option to store multiple profiles of a face for multi. angle authentication.
+* Incorporating decentralized authentication with the help of Block-chain and IPFS. 
+* Instead of just autofilling passwords , documents can also be retrieved
 
-
-
-
-
-
-
-
-
-
-
+---
 
